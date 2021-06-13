@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block styles %}{% endblock %}
+
+{% block title %}
+<div class="PageTitle">Calendar</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="clearfix">
+	<a class="btn left month-button" href="{% url 'Calendar:calendar'  %}?{{ prev_month }}"> < </a>
+	<a class="btn right month-button" href="{% url 'Calendar:calendar' %}?{{ next_month }}"> > </a>
+	<a class="btn right" href="{% url 'Calendar:event_new' %}"> New Event </a>
+</div>
+<div class="coverColor"></div>
+<div class="coverColor2"></div>
+
+{{ calendar }}
+
+{% endblock %}

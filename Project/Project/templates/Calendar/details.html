@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'assets/css/details.css' %}">
+{% endblock %}
+
+{% block title %}
+<div class="PageTitle">Details</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="clearfix">
+  <a class="btn left" href="{% url 'Calendar:calendar' %}"> Calendar </a>
+</div>
+
+<section>
+	<p class="display DetailTitle">Name:</p><p class="display DetailContent">{{choosenEvent.title}}</p>
+</section>
+<br><hr>
+<section>
+	<p class="display DetailTitle">Description:</p><p class="display DetailContent">{{choosenEvent.description}}</p>
+</section>
+<br><hr>
+<section>
+	<p class="display DetailTitle">Start date:</p><p class="display DetailContent">{{choosenEvent.start_time}}</p>
+</section>
+<br><hr>
+<section>
+	<p class="display DetailTitle">End before:</p><p class="display DetailContent">{{choosenEvent.end_time}}</p>
+</section>
+<br><hr>
+<section>
+	<p class="display DetailTitle">Remaining time:</p><p class="display DetailContent">{{choosenEvent.TimeRemains}}</p>
+</section>
+<br><hr>
+<section>
+	{% if choosenEvent.status == False %}
+		<p class="display DetailTitle">Status:</p>
+		<p class="display DetailContent">Undone</p>
+	{% endif %}
+</section>
+<hr>
+<div class="detailsMenu">
+  <a class="btn detailButton left" href="{% url 'Calendar:edit_event' event_id=choosenEvent.id %}"> Edit </a>
+  <a class="btn detailButton left" href="{% url 'Calendar:delete_event' event_id=choosenEvent.id %}" method="post"> Done </a>
+</div>
+{% endblock %}

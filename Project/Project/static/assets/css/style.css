@@ -1,0 +1,150 @@
+body {
+  font-family: "ptsans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #EFF0F0;
+  z-index: -2;
+}
+
+.title {
+  text-align: center;
+  margin: 0px;
+  background: #1abc9c;
+  height: 100px;
+  position: relative;
+  width: 100%;
+}
+
+
+.coverColor {
+  position: absolute;
+  background: #48C9B0;
+  height: 2px;
+  width: 99.15%;
+}
+
+.coverColor2 {
+  position: absolute;
+  background: #E2E3E3;
+  height: 85px;
+  top: 160px;
+  width: 99.15%;
+  z-index: -1;
+}
+
+.PageTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #48C9B0;
+  height: 100px;
+  color: white;
+  font-family: Garamond;
+}
+
+/* buttons styles */
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.btn {
+  padding: 7px 5px;
+  color: #fff;
+  background: rgb(212,75,56);
+  border: 1.5px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 0 0;
+  margin-right: 5px;
+  text-decoration: none;
+  outline: none;
+}
+
+.btn:hover {
+  background: rgb(232,95,76); 
+}
+
+.btn:active {
+  background: rgb(152,15,0);
+}
+
+.month-button {
+  font-size: 200%;
+  position: relative;
+  bottom: 3px;
+  background: none;
+  border-color: #48C9B0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+.clearfix {
+  margin: 0px;
+  background: #48C9B0;
+  position: relative;
+  height: 50px;
+
+}
+
+/* Form styles */
+.form {
+  margin: auto;
+}
+
+.form input, .form select, .form textarea {
+  border-radius: 5px;
+  border: 1px solid #17a2b8;
+  outline: none;
+  background: none;
+  padding: 5px;
+  width: 100%;
+}
+
+/* App styles */
+
+.calendar {
+  width: 100.12%;
+  font-size: 13px;
+}
+
+.calendar tr, .calendar td {
+  border: 1px solid black;
+}
+
+
+.calendar th {
+  padding: 10px;
+  text-align: center;
+  font-family: Garamond; 
+  font-size: 20px;
+  background: #E2E3E3;
+}
+
+.calendar td {
+  width: 200px;
+  height: 150px;
+  padding: 20px 0px 0px 5px;
+}
+
+.month {
+  font-size: 25px;
+  background: #E2E3E3;
+}
+
+.date {
+  font-size: 16px;
+}
+
+ul {
+  height: 100%;
+  padding: 0px 5px 0px 20px;
+}
+
+a {
+  color: #17a2b8;
+  text-decoration: none;
+}
+
