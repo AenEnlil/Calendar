@@ -13,11 +13,11 @@ class Calendar(HTMLCalendar):
 
 	def formatday(self, day, events):
 		events_per_day = events.filter(start_time__day = day)
-		d = ''
+		ev = ''
 		for event in events_per_day:
-			d += f'<li> {event.get_html_url} </li>'
+			ev += f'<li> {event.get_html_url} </li>'
 		if day != 0:
-			return f"<td><span class = 'date'>{day}</span><ul> {d} </ul></td>"
+			return f"<td><span class = 'date'>{day}</span><ul> {ev} </ul></td>"
 		return '<td></td>'
 
 

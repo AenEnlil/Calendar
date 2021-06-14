@@ -21,5 +21,8 @@ class Event(models.Model):
 	@property
 	def get_html_url(self):
 		url = reverse('Calendar:details', args=(self.id,))
-		return f'<a href="{url}"> {self.title} </a>'
+		if self.status == False:
+			return f'<a href="{url}" style="color:red;"> {self.title} </a>'
+		else:
+			return f'<a href="{url}" style="color:green;"> {self.title} </a>'
 

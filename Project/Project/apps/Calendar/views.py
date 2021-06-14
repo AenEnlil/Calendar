@@ -86,6 +86,11 @@ def delete_event(request, event_id):
 	event_to_delete.delete()
 	return HttpResponseRedirect(reverse('Calendar:calendar'))
 
+def status_change(request, event_id):
+	event = Event.objects.get(id = event_id)
+	event.status = True;
+	event.save()
+	return HttpResponseRedirect(reverse('Calendar:calendar'))
 
 
 

@@ -40,11 +40,14 @@
 	{% if choosenEvent.status == False %}
 		<p class="display DetailTitle">Status:</p>
 		<p class="display DetailContent">Undone</p>
+	{% elif choosenEvent.status == True %}
+		<p class="display DetailTitle">Status:</p>
+		<p class="display DetailContent">Done</p>
 	{% endif %}
 </section>
 <hr>
 <div class="detailsMenu">
   <a class="btn detailButton left" href="{% url 'Calendar:edit_event' event_id=choosenEvent.id %}"> Edit </a>
-  <a class="btn detailButton left" href="{% url 'Calendar:delete_event' event_id=choosenEvent.id %}" method="post"> Done </a>
-</div>
+  <a class="btn detailButton left" href="{% url 'Calendar:delete_event' event_id=choosenEvent.id %}" method="post"> Delete </a>
+  <a class="btn detailButton left" href="{% url 'Calendar:change_status' event_id=choosenEvent.id %}" method="post"> Done </a>
 {% endblock %}
