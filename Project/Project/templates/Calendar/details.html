@@ -48,6 +48,6 @@
 <hr>
 <div class="detailsMenu">
   <a class="btn detailButton left" href="{% url 'Calendar:edit_event' event_id=choosenEvent.id %}"> Edit </a>
-  <a class="btn detailButton left" href="{% url 'Calendar:delete_event' event_id=choosenEvent.id %}" method="post"> Delete </a>
-  <a class="btn detailButton left" href="{% url 'Calendar:change_status' event_id=choosenEvent.id %}" method="post"> Done </a>
+  <a class="btn detailButton left" href="{% url 'Calendar:delete_event' event_id=choosenEvent.id %}"> Delete </a>
+  <a class="btn detailButton left" href="{% url 'Calendar:change_status' event_id=choosenEvent.id %}"> Done </a>
 {% endblock %}
